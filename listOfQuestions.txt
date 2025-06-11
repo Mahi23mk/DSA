@@ -1,0 +1,95 @@
+1. Create a simple rate limiter middleware
+Problem: Implement a middleware that limits each IP to 5 requests per minute.
+
+→ Tests logic, middleware knowledge, and object handling.
+
+2. Implement a custom event emitter
+Problem: Write a class that mimics Node.js's EventEmitter. It should have:
+
+on(event, callback)
+
+emit(event, data)
+
+off(event, callback)
+
+→ Great test of logic and understanding of events in Node.
+
+3. Build a simple in-memory cache
+Problem: Implement a function set(key, value, ttl) and get(key) which:
+
+Stores data in memory.
+
+Removes the key automatically after ttl milliseconds.
+
+→ Tests timers, closures, and object manipulation.
+
+4. Write a function to flatten a deeply nested object
+js
+Copy
+Edit
+const obj = {
+  a: 1,
+  b: { c: 2, d: { e: 3 } }
+};
+Expected Output:
+
+js
+Copy
+Edit
+{
+  "a": 1,
+  "b.c": 2,
+  "b.d.e": 3
+}
+→ Tests recursion, object handling, real-world transformation logic.
+
+5. Create a file watcher using Node.js
+Problem: Watch a folder and log whenever a file is added, modified, or deleted.
+
+→ Use fs.watch or fs.watchFile.
+
+6. Build a JSON log writer
+Problem: Implement a logger function that:
+
+Writes logs to a file logs.json.
+
+Appends logs in proper JSON format.
+
+Rotates logs after they reach 5MB.
+
+→ Tests file system, streams, and logic for real apps.
+
+7. Async Retry Logic
+Write a function retry(fn, retries) that will:
+
+Retry fn (a function returning a promise) up to retries times if it fails.
+
+→ Tests async logic, promises, and retry patterns.
+
+8. Simple JWT Authentication Middleware
+Problem: Create a middleware that:
+
+Reads a JWT from the Authorization header.
+
+Verifies it using jsonwebtoken.
+
+Attaches the decoded user to req.user.
+
+→ Tests Express, async error handling, JWT logic.
+
+9. Request Batching
+Problem: Write a function that collects multiple requests for a resource within a short time window (say 100ms) and processes them in a batch.
+
+→ Tests timers, closures, async handling, and efficient API design.
+
+10. Concurrency Control (Queueing System)
+Problem: Design a simple task queue that:
+
+Processes up to n tasks in parallel.
+
+Queues remaining ones.
+
+When one completes, pulls from the queue.
+
+→ Tests understanding of parallelism and control flow.
+
