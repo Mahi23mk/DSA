@@ -5,6 +5,7 @@ function LongestSubstringAtMostKDistinctChar(s, k) {
     let maxLength = 0;
 
     while (right < s.length) {
+        //expand
         map[s[right]] = (map[s[right]] || 0) + 1;
 
         // Shrink window until we have at most k distinct characters
