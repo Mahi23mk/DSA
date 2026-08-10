@@ -1,10 +1,3 @@
-const flat = {
-  "user.name": "Mahima",
-  "user.address.city": "Chandigarh",
-  "user.address.zip": 12345,
-  "active": true
-};
-
 const result = {}
 for(let [key, val] of Object.entries(flat)){
 
